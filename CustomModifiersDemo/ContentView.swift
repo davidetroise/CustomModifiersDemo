@@ -14,7 +14,21 @@ struct ContentView: View {
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Artist gallery")
+                .mainTitle()
+            
+            AsyncImage(url: URL(string: "https://picsum.photos/300"))
+                .mainPhoto()
+                .watermark(title: "MODIFIER!")
+                .padding()
+            
+            Button {
+                
+            } label: {
+                Text("Purchase me!")
+                    .mainButton()
+            }
+
         }
         .padding()
     }
